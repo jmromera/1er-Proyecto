@@ -1,0 +1,10 @@
+<h2><%= @article.title %></h2>
+
+<% unless  @article.user.nil? %>
+	
+<p> Escrito por: <%= @article.user.email %> </p>
+
+<% end %>
+
+<p> Visitas: <%= @article.visits_count %> </p>
+<p> <%= @article.body %> - <%= link_to "Editar", edit_article_path(@article) %> </p>
